@@ -13,10 +13,19 @@ User.sync() // Syncronize - check to see if table exists, if false, then create
 		console.log("Syncronized the DB!")
 	
 
-// User.create({
-// 	name: "Cassio",
-// 	age: 23,
-// 	alive: true
-// });
+User.create({
+	name: "Test",
+	age: 23,
+	alive: true
+});
+
+	User.findAll()
+	.then(data => {
+		data.forEach(function(val) {
+			console.log(val.dataValues)
+		})
+		// console.log(data.dataValues, data.dataValues.age);
+	})
+	
 
 })
